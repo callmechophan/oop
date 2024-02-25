@@ -86,10 +86,11 @@ int main() {
         std::string timestamp{"2020/03/17 17:01:24.884492"};
         std::string product{"ETH/BTC"};
 
+        enum class Order{bid, ask};
+        Order order = Order::ask;
+
         PrintMenu();
-
         int user_option = GetUserOption();
-
         ProcessUserOption(user_option);
     }
 }
