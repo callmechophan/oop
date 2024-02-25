@@ -10,6 +10,21 @@ class OrderBooks {
         std::string timestamp;
         std::string product;
         OrderBook order_book;
+        
+        // constructors
+        OrderBooks(
+            double price,
+            double amount,
+            std::string timestamp,
+            std::string product,
+            OrderBook order_book
+        ) {
+            this -> price = price;
+            this -> amount = amount;
+            this -> timestamp = timestamp;
+            this -> product = product;
+            this -> order_book = order_book;
+        }
 };
 
 void PrintMenu() {
@@ -92,12 +107,7 @@ void ProcessUserOption(int user_option) {
 }
 
 int main() {
-    OrderBooks order;
-    order.price = 7.44564869;
-    order.amount = 0.02187308;
-    order.timestamp = "2020/03/17 17:01:24.884492";
-    order.product = "ETH/BTC";
-    order.order_book = OrderBook::bid;
+    OrderBooks order {7.44564869, 0.02187308, "2020/03/17 17:01:24.884492", "ETH/BTC", OrderBook::bid};
 
     std::cout << order.timestamp << std::endl;
 
