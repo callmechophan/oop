@@ -81,6 +81,11 @@ void ProcessUserOption(int user_option) {
 
 int main() {
     while (true) {
+        double price = 7.44564869;
+        double amount = 0.02187308;
+        std::string timestamp{"2020/03/17 17:01:24.884492"};
+        std::string product{"ETH/BTC"};
+
         PrintMenu();
 
         int user_option = GetUserOption();
