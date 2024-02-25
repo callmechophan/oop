@@ -8,4 +8,9 @@ int main() {
     std::cout << "4. Make a bid" << std::endl;
     std::cout << "5. Print wallet" << std::endl;
     std::cout << "6. Continue" << std::endl;
+    std::cout << "==========" << std::endl;
+
+    int user_option;
+    std::cin >> user_option;
+    std::cout << "You chose: " << user_option << std::endl;
 }
