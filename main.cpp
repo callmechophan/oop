@@ -19,12 +19,65 @@ int GetUserOption() {
     return user_option;
 }
 
+// 1
+void PrintHelp() {
+    std::cout << "Help" << std::endl;
+}
+
+// 2
+void PrintMarketStats() {
+
+}
+
+// 3
+void EnterOffer() {
+
+}
+
+// 4
+void EnterBid() {
+
+}
+
+// 5
+void PrintWallet() {
+
+}
+
+// 6
+void GoToTheNextTimeFrame() {
+
+}
+
 void ProcessUserOption(int user_option) {
     if (user_option == 0) { // bad input
         std::cout << "Invalid choice. Re-input!" << std::endl;
     }
-}
 
+    if (user_option == 1) {
+        PrintHelp();
+    }
+
+    if (user_option == 2) {
+        PrintMarketStats();
+    }
+
+    if (user_option == 3) {
+        EnterOffer();
+    }
+
+    if (user_option == 4) {
+        EnterBid();
+    }
+
+    if (user_option == 5) {
+        PrintWallet();
+    }
+
+    if (user_option == 6) {
+        GoToTheNextTimeFrame();
+    }
+}
 
 int main() {
     while (true) {
@@ -34,6 +87,4 @@ int main() {
 
         ProcessUserOption(user_option);
     }
-
-    return 0;
 }
