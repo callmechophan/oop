@@ -10,7 +10,7 @@ class OrderBooks {
         std::string timestamp;
         std::string product;
         OrderBook order_book;
-        
+
         // constructors
         OrderBooks(
             double price,
@@ -18,7 +18,7 @@ class OrderBooks {
             std::string timestamp,
             std::string product,
             OrderBook order_book
-        ) {
+        ): price(price), amount(amount), timestamp(timestamp), product(product), order_book(order_book) { // constructor initialisation lists
             this -> price = price;
             this -> amount = amount;
             this -> timestamp = timestamp;
@@ -107,9 +107,8 @@ void ProcessUserOption(int user_option) {
 }
 
 int main() {
-    OrderBooks order {7.44564869, 0.02187308, "2020/03/17 17:01:24.884492", "ETH/BTC", OrderBook::bid};
-
-    std::cout << order.timestamp << std::endl;
+    OrderBooks order {7.44564869, 1, "2020/03/17 17:01:24.884492", "ETH/BTC", OrderBook::bid};
+    std::cout << order.amount << std::endl;
 
     // while (true) {
     //     PrintMenu();
