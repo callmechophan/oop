@@ -1,6 +1,17 @@
 #include <iostream>
 #include <vector>
 
+enum class OrderBook{bid, ask};
+
+class OrderBooks {
+    public:
+        double price;
+        double amount;
+        std::string timestamp;
+        std::string product;
+        OrderBook order_book;
+};
+
 void PrintMenu() {
     std::cout << "\nChoose an option:" << std::endl;
     std::cout << "1. Print help" << std::endl;
@@ -81,25 +92,18 @@ void ProcessUserOption(int user_option) {
 }
 
 int main() {
-    enum class Order{bid, ask};
+    OrderBooks order;
+    order.price = 7.44564869;
+    order.amount = 0.02187308;
+    order.timestamp = "2020/03/17 17:01:24.884492";
+    order.product = "ETH/BTC";
+    order.order_book = OrderBook::bid;
 
-    std::vector<double> prices;
-    std::vector<double> amounts;
-    std::vector<std::string> timestamps;
-    std::vector<std::string> products;
-    std::vector<Order> order;
-    
-    prices.push_back(7.44564869);
-    amounts.push_back(0.02187308);
-    timestamps.push_back("2020/03/17 17:01:24.884492");
-    products.push_back("ETH/BTC");
-    order.push_back(Order::bid);
+    std::cout << order.timestamp << std::endl;
 
-    std::cout << prices[0] << std::endl;
-
-    while (true) {
-        PrintMenu();
-        int user_option = GetUserOption();
-        ProcessUserOption(user_option);
-    }
+    // while (true) {
+    //     PrintMenu();
+    //     int user_option = GetUserOption();
+    //     ProcessUserOption(user_option);
+    // }
 }
