@@ -1,4 +1,6 @@
-#include <iostream>
+#pragma once
+
+#include <string>
 
 enum class OrderBookEnum {bid, ask};
 
