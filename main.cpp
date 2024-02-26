@@ -5,11 +5,11 @@
 
 int main() {
     ManageMain manage_main;
-    manage_main.PrintMenu();
+    manage_main.init();
 
 
-    
-}
+
+};
 
 
 
