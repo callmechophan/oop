@@ -2,6 +2,8 @@ class ManageMain {
     public:
         ManageMain();
         void init();
+    
+    private:
         void PrintMenu();
         int GetUserOption();
 
