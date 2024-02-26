@@ -2,7 +2,7 @@
 
 #include <string>
 
-enum class OrderBookEnum {bid, ask};
+enum class OrderBookEnum {bid, ask, unknown};
 
 class OrderBook {
     public:
@@ -11,6 +11,8 @@ class OrderBook {
         std::string timestamp;
         std::string product;
         OrderBookEnum order_book_enum;
+
+        static OrderBookEnum StringToOrderBookEnum(std::string string);
 
         // constructors
         OrderBook(

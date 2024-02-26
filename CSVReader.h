@@ -9,6 +9,6 @@ class CSVReader {
         static std::vector<OrderBook> ReadCSV(std::string csv_file);
     
     private:
-        static std::vector<std::string> tokenise(std::string csv_line, char separator);
-        static OrderBook strings_to_order_book(std::vector<std::string> tokens);
+        static std::vector<std::string> Tokenise(std::string csv_line, char separator);
+        static OrderBook StringsToOrderBook(std::vector<std::string> tokens);
 };

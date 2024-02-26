@@ -13,3 +13,13 @@ OrderBook::OrderBook(
     this -> product = product;
     this -> order_book_enum = order_book_enum;
 };
+
+OrderBookEnum OrderBook::StringToOrderBookEnum(std::string string) {
+    if (string == "ask") {
+        return OrderBookEnum::ask;
+    } else if (string == "bid") {
+        return OrderBookEnum::bid;
+    } else {
+        return OrderBookEnum::unknown;
+    }
+};
