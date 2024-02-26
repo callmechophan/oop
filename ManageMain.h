@@ -1,3 +1,6 @@
+#include <vector>
+#include "OrderBook.h"
+
 class ManageMain {
     public:
         ManageMain();
@@ -6,6 +9,7 @@ class ManageMain {
     private:
         void PrintMenu();
         int GetUserOption();
+        void LoadOrderBook();
 
         // 1
         void PrintHelp();
@@ -21,4 +25,6 @@ class ManageMain {
         void GoToTheNextTimeFrame();
 
         void ProcessUserOption(int user_option);
+
+        std::vector<OrderBook> orders;
 };

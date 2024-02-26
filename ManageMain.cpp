@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "ManageMain.h"
 
 ManageMain::ManageMain() {
@@ -6,6 +7,8 @@ ManageMain::ManageMain() {
 };
 
 void ManageMain::init() {
+    LoadOrderBook();
+
     int user_option;
 
     while (true) {
@@ -15,6 +18,10 @@ void ManageMain::init() {
 
         std::cout << "\n";
     }
+};
+
+void ManageMain::LoadOrderBook() {
+    orders.push_back({7.44564869, 0.02187308, "2020/03/17 17:01:24.884492", "ETH/BTC", OrderBookEnum::bid});
 };
 
 void ManageMain::PrintMenu() {
@@ -43,7 +50,7 @@ void ManageMain::PrintHelp() {
 
 // 2
 void ManageMain::PrintMarketStats() {
-
+    std::cout << orders.size() << std::endl;
 };
 
 // 3

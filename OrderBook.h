@@ -1,21 +1,21 @@
 #include <iostream>
 
-enum class OrderBook {bid, ask};
+enum class OrderBookEnum {bid, ask};
 
-class OrderBooks {
+class OrderBook {
     public:
         double price;
         double amount;
         std::string timestamp;
         std::string product;
-        OrderBook order_book;
+        OrderBookEnum order_book_enum;
 
         // constructors
-        OrderBooks(
+        OrderBook(
             double price,
             double amount,
             std::string timestamp,
             std::string product,
-            OrderBook order_book
+            OrderBookEnum order_book_enum
         );
 };
