@@ -1,6 +1,6 @@
 #include <iostream>
 
-enum class OrderBook{bid, ask};
+enum class OrderBook {bid, ask};
 
 class OrderBooks {
     public:
