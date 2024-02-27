@@ -46,6 +46,10 @@ void ManageMain::PrintHelp() {
 
 // 2
 void ManageMain::PrintMarketStats() {
+    for (std::string const i : manage_order_book.GetKnownProducts()) {
+        std::cout << "Product: " << i << std::endl;
+    }
+
     // std::cout << "OrderBook contains: " << orders.size() << "." << std::endl;
 
     // unsigned int bids = 0;
