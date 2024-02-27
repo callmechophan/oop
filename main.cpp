@@ -7,6 +7,6 @@ int main() {
     // ManageMain manage_main;
     // manage_main.init();
 
-    CSVReader reader;
+    CSVReader::ReadCSV("data.csv");
 
 };
