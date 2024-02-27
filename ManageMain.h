@@ -1,5 +1,6 @@
 #include <vector>
 #include "OrderBook.h"
+#include "ManageOrderBook.h"
 
 class ManageMain {
     public:
@@ -9,7 +10,6 @@ class ManageMain {
     private:
         void PrintMenu();
         int GetUserOption();
-        void LoadOrderBook();
 
         // 1
         void PrintHelp();
@@ -26,5 +26,5 @@ class ManageMain {
 
         void ProcessUserOption(int user_option);
 
-        std::vector<OrderBook> orders;
+        ManageOrderBook manage_order_book{"data.csv"};
 };

@@ -8,7 +8,6 @@ ManageMain::ManageMain() {
 };
 
 void ManageMain::init() {
-    LoadOrderBook();
 
     int user_option;
 
@@ -19,10 +18,6 @@ void ManageMain::init() {
 
         std::cout << "\n";
     }
-};
-
-void ManageMain::LoadOrderBook() {
-    orders = CSVReader::ReadCSV("data.csv");
 };
 
 void ManageMain::PrintMenu() {
@@ -51,22 +46,22 @@ void ManageMain::PrintHelp() {
 
 // 2
 void ManageMain::PrintMarketStats() {
-    std::cout << "OrderBook contains: " << orders.size() << "." << std::endl;
+    // std::cout << "OrderBook contains: " << orders.size() << "." << std::endl;
 
-    unsigned int bids = 0;
-    unsigned int asks = 0;
+    // unsigned int bids = 0;
+    // unsigned int asks = 0;
 
-    for (OrderBook& i : orders) {
-        if (i.order_book_enum == OrderBookEnum::ask) {
-            asks++;
-        }
-        if (i.order_book_enum == OrderBookEnum::bid) {
-            bids++;
-        }
-    }
+    // for (OrderBook& i : orders) {
+    //     if (i.order_book_enum == OrderBookEnum::ask) {
+    //         asks++;
+    //     }
+    //     if (i.order_book_enum == OrderBookEnum::bid) {
+    //         bids++;
+    //     }
+    // }
 
-    std::cout << "OrderBook asks: " << asks << "." << std::endl;
-    std::cout << "OrderBook bids: " << bids << "." << std::endl;
+    // std::cout << "OrderBook asks: " << asks << "." << std::endl;
+    // std::cout << "OrderBook bids: " << bids << "." << std::endl;
 };
 
 // 3
