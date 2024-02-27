@@ -23,8 +23,6 @@ std::vector<OrderBook> CSVReader::ReadCSV(std::string csv_filename) {
         }
     }
 
-    std::cout << order_books.size() << std::endl;
-
     return order_books;
 };
 

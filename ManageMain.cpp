@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "ManageMain.h"
+#include "CSVReader.h"
 
 ManageMain::ManageMain() {
 
@@ -21,7 +22,7 @@ void ManageMain::init() {
 };
 
 void ManageMain::LoadOrderBook() {
-    orders.push_back({7.44564869, 0.02187308, "2020/03/17 17:01:24.884492", "ETH/BTC", OrderBookEnum::bid});
+    orders = CSVReader::ReadCSV("data.csv");
 };
 
 void ManageMain::PrintMenu() {
@@ -45,12 +46,27 @@ int ManageMain::GetUserOption() {
 
 // 1
 void ManageMain::PrintHelp() {
-    std::cout << "Help" << std::endl;
+    std::cout << "Help!" << std::endl;
 };
 
 // 2
 void ManageMain::PrintMarketStats() {
-    std::cout << orders.size() << std::endl;
+    std::cout << "OrderBook contains: " << orders.size() << "." << std::endl;
+
+    unsigned int bids = 0;
+    unsigned int asks = 0;
+
+    for (OrderBook& i : orders) {
+        if (i.order_book_enum == OrderBookEnum::ask) {
+            asks++;
+        }
+        if (i.order_book_enum == OrderBookEnum::bid) {
+            bids++;
+        }
+    }
+
+    std::cout << "OrderBook asks: " << asks << "." << std::endl;
+    std::cout << "OrderBook bids: " << bids << "." << std::endl;
 };
 
 // 3
